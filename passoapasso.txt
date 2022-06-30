@@ -1,0 +1,136 @@
+Passo a passo do que fazer:
+
+1. Criar banco de dados
+
+2. Id tem que ser primary key e identity e not null
+
+3. Criar projeto angular
+
+ ng new app
+
+4. Testar app
+
+5. Criar components
+
+ng g c ...
+
+6. Criar service
+
+ng g s ...
+
+7. Criar classe model
+
+ng g class models/register --type-model
+
+8. Inserir component no appcomponent
+
+9. Inserir bootstrap
+
+10. Criar front
+
+11. Importar o formsModule no app.Module
+
+12. Importar o NgModule no component criado
+
+13. colocar no form o #form="ngForm"
+
+14. Criar model class
+
+15. Importar o HttpClientModule no module
+
+16. Importar o HttpClient no service
+
+17. criar a varaivel formData: Register 
+
+18. Inserir no constructor do component criado (public register_service: RegisterService)
+
+19. Inserir nos input do modal o 
+name="Name" #Name="ngModel" [(ngModel)] = "register_service.formData.Name"
+
+20. Colocar no button [disabled]="form.invalid"
+
+21. Colocar required nos inputs
+
+22. Criar o método para resetar o formulário
+
+-- Parte 2
+
+23. Criar a API com a descrição maior
+
+24. Criar pasta models e criar a classe RegisterDBContext
+
+25. Instalar os pacotes ef, ef.sqlserve e ef.tools na (3.1.25)
+
+26. Instalar Microsoft.Bcl.AsyncInterfaces, Microsoft.AspNetCore.Mvc.Newtonsof(3.0.0) e Cors
+
+27. Inserir metodo na classe RegisterDb
+
+28. Criar classe Users e inserir igual a model
+
+29.Inserir DbContext na startup.cs colocando a connection string
+
+30. Inserir UserControlles com o comando
+
+31.Inserir alguns usuários no banco de dados
+
+32. Sempre limpar e rebuildar a solução
+
+33. Testar API
+
+34. Adicionar o newtonsoftjson na startup.cs
+
+35. limpar e rebuildar 
+
+-- Parte 3
+
+36. Inserir private http:HttpClientModule no construtor da service
+
+37. Criar funcao loadUsers() na service
+
+38. Pegar a url da api e inserir em uma variavel
+
+39. Crirar função loadUsers no component também
+
+40. Adicionar o Cors no startup.cs
+
+41. limpar e rebuildar 
+
+42. Chamar funções no ngOnInit
+
+43. Terminar html colocando a table
+
+44. colocar no form (submit)="OnSubmit(form)"
+
+45. Criar função OnSubmit
+
+46. Inserir um input hidden pegando o id do mesmo modo que são os outros inputs
+
+47. Criar função InsertUsers() no component
+
+48. Criar todas as funções de crud no service
+
+49. limpar e rebuildar 
+
+50. Testar se está inserindo
+
+-- Parte 4
+
+51. Inserir (click)="toForm(user)" nos td
+
+52. Criar função toForm
+
+52. Criar updateUser no component
+
+53. Colocar funções no OnSubmit
+
+54. Testar se está atualizando
+
+55. Inserir th vazio
+
+56.  Inserir td de button delete
+
+57. Colocar no button (click)="deleteUser(user.id)"
+
+58. Criar função deleteUser no component
+
+59. Testar delete
